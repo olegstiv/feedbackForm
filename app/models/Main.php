@@ -29,7 +29,7 @@ class Main extends Model
             $this->validIsEmail = false;
         }
 
-        if (strlen($massageLen < 3 or $massageLen > 255)) {
+        if (strlen($massageLen < 3)) {
             $this->validIsMessage = false;
         } else {
             $this->validIsMessage = true;

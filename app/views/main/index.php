@@ -58,7 +58,8 @@
         <div class="container-lastMessage row mb-3">
             <div class="col-md-12 themed-grid-col">
                 <div class="pb-3">
-                    <b>От: </b><?php echo $message['email']; ?>
+                    <b>От: </b><?php echo $message['NameFO']; ?> <br>
+                    <b>Email: </b><?php echo $message['email']; ?>
                 </div>
                 <div class="row">
                     <div class="col-md-12 themed-grid-col"><?php echo $message['text']; ?></div>
@@ -84,11 +85,6 @@
         scale: 1.1
     });
 
-    $()
-    {
-        alert('asd');
-    }
-    ;
 
 
 </script>
