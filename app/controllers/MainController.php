@@ -22,9 +22,9 @@ class MainController extends Controller
         }else
         {
             $this->vars = [
-                'validEmail' => '',
-                'validName' => '',
-                'validMessage' => '',
+                'validEmail' => true,
+                'validName' => true,
+                'validMessage' => true,
                 'textMessage' => '',
                 'textName' => '',
                 'textEmail' => ''

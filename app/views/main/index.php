@@ -9,17 +9,17 @@
 				<span class="contact1-form-title">
 					Всего мгновение и вы свяжитесь с нами!
 				</span>
-            <?php if ( $validName or is_null($validName)) {?>
+            <?php if ( $validName ) {?>
             <div class="wrap-input1  validate-input">
             <?php }else{  ?>
-            <div class="wrap-input1  validate-input alert-validate"   data-validate = "Name is required">
+            <div class="wrap-input1  validate-input alert-validate"   data-validate = "Введите своё ФИО">
                 <?php } ?>
-                <input class="input1" type="text" name="name" placeholder="Фамилия Имя Отечество" value=<?php echo ( is_null($textName)) ? '' : $textName?> >
+                <input class="input1" type="text" name="name" placeholder="Фамилия Имя Отчество" value=<?php echo ( is_null($textName)) ? '' : $textName?> >
                 <span class="shadow-input1"></span>
             </div>
 
 
-            <?php if ( $validEmail or is_null($validEmail))  {?>
+            <?php if ( $validEmail )  {?>
             <div class="wrap-input1 validate-input">
             <?php }else{  ?>
             <div class="wrap-input1 validate-input alert-validate" data-validate = "Напишите в формате ex@abc.xyz">
@@ -28,12 +28,12 @@
                 <span class="shadow-input1"></span>
             </div>
 
-            <?php if ( $validMessage or is_null($validMessage)) {?>
+            <?php if ( $validMessage ) {?>
                 <div class="wrap-input1 validate-input">
             <?php }else{  ?>
                 <div class="wrap-input1 validate-input alert-validate" data-validate = "Введите текст сообщения">
             <?php } ?>
-                    <textarea class="input1" name="message"  placeholder="Текст сообщения"> <?php echo ( is_null($textMessage)) ? '' : $textMessage?></textarea>
+                    <textarea class="input1" name="message"  placeholder="Текст сообщения"><?php echo ( is_null($textMessage)) ? '' : $textMessage?></textarea>
                     <span class="shadow-input1">:</span>
                 </div>
 
