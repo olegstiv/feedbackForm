@@ -36,6 +36,7 @@ class MainController extends Controller
     public function addMessage()
     {
         $this->model->addMessage($_POST);
+
         $this->vars = [
             'validEmail' => $this->model->validIsEmail,
             'validName' => $this->model->validIsName,
@@ -44,6 +45,8 @@ class MainController extends Controller
             'textName' => $_POST['name'],
             'textEmail' => $_POST['email']
         ];
+
+
 
     }
 

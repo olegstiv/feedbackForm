@@ -17,20 +17,18 @@ class Db
         $this->db = new PDO('mysql:host='. $config['host'] . ';dbname=' . $config['dbname'], $config['user'], $config['pass']);
 	}
 
-    public function query( $sql, $params = [] )
+    public function addMessage( $name, $email, $text)
     {
-        $stmt = $this->db->prepare( $sql);
-        if ( !empty($params))
-        {
-            foreach ($params as $param => $val)
-            {
-                $stmt->bindValue( ':'.$param, $val);
-            }
-        }
-        $stmt->execute();
-        return $stmt;
-
+        $data = [
+            'name' => $name ,
+            'email' => $email,
+            'text' => $text,
+                ];
+        $stmr = $this->db->prepare( "INSERT INTO message ( NameFO, email, text) VALUES ( :name, :email, :text )");
+        $stmr->execute($data);
+        return $stmr;
 	}
+
 
     public function row( $sql, $params = [] )
     {

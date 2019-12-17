@@ -50,8 +50,15 @@ class Main extends Model
             $this->validIsMessage = true;
         }
 
+        if ($this->validIsName and $this->validIsEmail and $this->validIsMessage)
+        {
 
-        return true;
+          $result = $this->db->addMessage($post['name'], $post['email'], $post['message']);
+          $_POST = null;
+          return true;
+        }else{
+            return false;
+        }
 
 
     }

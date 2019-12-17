@@ -30,15 +30,6 @@ abstract class Controller
         }
     }
 
-    public function update()
-    {
-        $this->location('/');
-    }
-
-    public function location( $url )
-    {
-        exit(json_encode(['url' => $url]));
-    }
 
 
 
