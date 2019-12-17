@@ -30,7 +30,10 @@ class MainController extends Controller
                 'textEmail' => ''
             ];
         }
-        $this->view->render('Форма обратной связи', $this->vars );
+
+        $result = $this->model->getMessage();
+
+        $this->view->render('Форма обратной связи', $this->vars, $result);
     }
 
     public function addMessage()

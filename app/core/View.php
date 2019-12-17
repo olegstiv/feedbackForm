@@ -23,10 +23,11 @@ class View
 
     }
 
-    public function render($title, $vars = [])
+    public function render($title, $vars = [], $messages = [])
     {
 
         extract($vars);
+        extract($messages);
         if (file_exists( $this->path ))
         {
             ob_start();
