@@ -1,26 +1,20 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: olegs
- * Date: 16.12.2019
- * Time: 14:19
- */
 
 namespace app\controllers;
+
 use app\core\Controller;
 
 class MainController extends Controller
 {
     public $vars = [];
-    public function indexAction(){
-//        $result = $this->model->getNews();
 
-        if (!empty($_POST))
-        {
+    public function indexAction()
+    {
+
+        if (!empty($_POST)) {
             $this->addMessage($_POST);
 
-        }else
-        {
+        } else {
             $this->vars = [
                 'validEmail' => true,
                 'validName' => true,
@@ -48,7 +42,6 @@ class MainController extends Controller
             'textName' => $_POST['name'],
             'textEmail' => $_POST['email']
         ];
-
 
 
     }

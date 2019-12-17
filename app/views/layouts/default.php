@@ -25,6 +25,6 @@
     <link rel="stylesheet" type="text/css" href="/public/styles/main.css">
 </head>
 <body>
-    <?php echo $content; ?>
+<?php echo $content; ?>
 </body>
 </html>

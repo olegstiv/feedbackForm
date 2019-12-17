@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: olegs
- * Date: 16.12.2019
- * Time: 14:29
- */
 
 namespace app\core;
-
 
 class View
 {
@@ -28,8 +21,7 @@ class View
 
         extract($vars);
         extract($messages);
-        if (file_exists( $this->path ))
-        {
+        if (file_exists($this->path)) {
             ob_start();
             require $this->path;
             $content = ob_get_clean();
