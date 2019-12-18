@@ -21,3 +21,6 @@ foo.txt
 .target/
 
 .out/
+
+ftpsync.settings
+
