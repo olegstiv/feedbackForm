@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<< HEAD:App/Lib/Db.php
 namespace App\Lib;
-=======
-namespace Lib;
->>>>>>> de5108c15ccf69869f69e3415a486ebe1fa1afaf:Lib/Db.php
 
 use PDO;
 
@@ -15,7 +11,7 @@ class Db
 
     public function __construct()
     {
-        $config = require 'app/config/db.php';
+        $config = require 'App/config/db.php';
         $this->db = new PDO('mysql:host=' . $config['host'] . ';dbname=' . $config['dbname'], $config['user'],
             $config['pass']);
     }

@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<< HEAD:App/Core/Router.php
 namespace App\Core;
-=======
-namespace Core;
->>>>>>> de5108c15ccf69869f69e3415a486ebe1fa1afaf:Core/Router.php
 
 class Router
 {
@@ -15,7 +11,7 @@ class Router
     function __construct()
     {
 
-        $arr = require 'app/config/routes.php';
+        $arr = require 'App/config/routes.php';
         foreach ($arr as $key => $value) {
             $this->add($key, $value);
         }
@@ -25,6 +21,7 @@ class Router
     {
         $route = '#^' . $route . '$#';
         $this->routes[$route] = $params;
+
     }
 
     public function match()
@@ -43,7 +40,7 @@ class Router
     public function run()
     {
         if ($this->match()) {
-            $path = 'app\controllers\\' . ucfirst($this->params['controller']) . 'Controller';
+            $path = 'App\Controllers\\' . ucfirst($this->params['controller']) . 'Controller';
             if (class_exists($path)) {
                 $action = $this->params['action'] . 'Action';
                 if (method_exists($path, $action)) {
@@ -61,6 +58,3 @@ class Router
         }
     }
 }
-
-
-?>

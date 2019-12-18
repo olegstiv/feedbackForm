@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<< HEAD:App/Core/View.php
 namespace App\Core;
-=======
-namespace Core;
->>>>>>> de5108c15ccf69869f69e3415a486ebe1fa1afaf:Core/View.php
 
 class View
 {
@@ -16,7 +12,7 @@ class View
     public function __construct($route)
     {
         $this->route = $route;
-        $this->path = 'app/views/' . $route['controller'] . '/' . $route['action'] . '.php';
+        $this->path = 'App/Views/' . $route['controller'] . '/' . $route['action'] . '.php';
 
     }
 
@@ -29,7 +25,7 @@ class View
             ob_start();
             require $this->path;
             $content = ob_get_clean();
-            require "app/views/layouts/" . $this->layout . '.php';
+            require "App/Views/layouts/" . $this->layout . '.php';
         }
     }
 
