@@ -12,7 +12,7 @@ class View
     public function __construct($route)
     {
         $this->route = $route;
-        $this->path = 'Views/' . $route['controller'] . '/' . $route['action'] . '.php';
+        $this->path = 'App/Views/' . $route['controller'] . '/' . $route['action'] . '.php';
 
     }
 
@@ -21,12 +21,13 @@ class View
 
         extract($vars);
         extract($messages);
+
         if (file_exists($this->path)) {
             ob_start();
             require $this->path;
 
             $content = ob_get_clean();
-            require "Views/layouts/" . $this->layout . '.php';
+            require "App/Views/layouts/" . $this->layout . '.php';
         }
     }
 

@@ -25,3 +25,5 @@ foo.txt
 ftpsync.settings
 
 /vendor/
+
+/App/config/db.php

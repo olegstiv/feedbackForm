@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'host' => '127.0.0.1',
+    'host' => 'localhost',
     'dbname' => 'feedbackform',
-    'user' => 'admin',
-    'pass' => '10BA',
+    'user' => 'root',
+    'pass' => '',
 
 
 ];

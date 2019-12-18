@@ -24,7 +24,8 @@ class MainController extends Controller
                 'textEmail' => ''
             ];
         }
-        
+
+
         $result = $this->model->getMessage();
         
         $this->view->render('Форма обратной связи', $this->vars, $result);

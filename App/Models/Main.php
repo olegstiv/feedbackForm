@@ -54,7 +54,6 @@ class Main extends Model
 
     public function getMessage()
     {
-        
         $result = $this->db->row("SELECT * FROM message");
         return $result;
     }
