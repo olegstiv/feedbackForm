@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core;
+namespace Core;
 
 class Router
 {
@@ -40,20 +40,25 @@ class Router
     public function run()
     {
         if ($this->match()) {
-            $path = 'App\Controllers\\' . ucfirst($this->params['controller']) . 'Controller';
+            $path = 'Controllers\\' . ucfirst($this->params['controller']) . 'Controller';
             if (class_exists($path)) {
                 $action = $this->params['action'] . 'Action';
                 if (method_exists($path, $action)) {
                     $controller = new $path($this->params);
                     $controller->$action();
+                    
                 } else {
 //                   View::errorCode(404);
+                    echo "net action";
                 }
             } else {
 //                View::errorCode(404);
+                    // var_dump($this->match());
+                    echo "net route";
             }
         } else {
 //            View::errorCode(404);
+                    echo "net views";
 
         }
     }

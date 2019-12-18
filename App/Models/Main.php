@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Models;
+namespace Models;
 
-use App\Core\Model;
+use Core\Model;
 
 class Main extends Model
 {
@@ -54,6 +54,7 @@ class Main extends Model
 
     public function getMessage()
     {
+        
         $result = $this->db->row("SELECT * FROM message");
         return $result;
     }

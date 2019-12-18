@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core;
+namespace Core;
 
 class View
 {
@@ -12,7 +12,7 @@ class View
     public function __construct($route)
     {
         $this->route = $route;
-        $this->path = 'App/Views/' . $route['controller'] . '/' . $route['action'] . '.php';
+        $this->path = 'Views/' . $route['controller'] . '/' . $route['action'] . '.php';
 
     }
 
@@ -24,8 +24,9 @@ class View
         if (file_exists($this->path)) {
             ob_start();
             require $this->path;
+
             $content = ob_get_clean();
-            require "App/Views/layouts/" . $this->layout . '.php';
+            require "Views/layouts/" . $this->layout . '.php';
         }
     }
 
