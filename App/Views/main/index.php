@@ -4,50 +4,34 @@
             <img src="public/images/img-01.png" alt="IMG">
         </div>
 
-        <form method="post" action="/" class="contact1-form validate-form">
+        <form method="post" class="contact1-form validate-form">
 				<span class="contact1-form-title">
 					Всего мгновение и вы свяжитесь с нами!
 				</span>
-            <?php if ($validName) { ?>
-            <div class="wrap-input1  validate-input">
-                <?php }else{ ?>
-                <div class="wrap-input1  validate-input alert-validate" data-validate="Введите своё ФИО">
-                    <?php } ?>
-                    <input class="input1" type="text" name="name" placeholder="Фамилия Имя Отчество"
-                           value=<?php echo (is_null($textName)) ? '' : $textName ?>>
+            <div class="wrap-input1  validate-input" data-validate="Введите своё ФИО">
+                <input class="input1" type="text" name="name" placeholder="Фамилия Имя Отчество">
+                <span class="shadow-input1"></span>
+            </div>
+            <div class="wrap-input1 validate-input">
+                <div class="wrap-input1 validate-input"
+                     data-validate="Напишите в формате ex@abc.xyz">
+                    <input class="input1" type="text" name="email" placeholder="Email">
                     <span class="shadow-input1"></span>
                 </div>
-
-
-                <?php if ($validEmail)  { ?>
-                <div class="wrap-input1 validate-input">
-                    <?php }else{ ?>
-                    <div class="wrap-input1 validate-input alert-validate"
-                         data-validate="Напишите в формате ex@abc.xyz">
-                        <?php } ?>
-                        <input class="input1" type="text" name="email" placeholder="Email"
-                               value=<?php echo (is_null($textEmail)) ? '' : $textEmail ?>>
-                        <span class="shadow-input1"></span>
-                    </div>
-
-                    <?php if ($validMessage) { ?>
-                    <div class="wrap-input1 validate-input">
-                        <?php }else{ ?>
-                        <div class="wrap-input1 validate-input alert-validate" data-validate="Введите текст сообщения">
-                            <?php } ?>
+                <div class="wrap-input1 validate-input" data-validate="Введите текст сообщения">
                             <textarea class="input1" name="message"
-                                      placeholder="Текст сообщения"><?php echo (is_null($textMessage)) ? '' : $textMessage ?></textarea>
-                            <span class="shadow-input1">:</span>
-                        </div>
+                                      placeholder="Текст сообщения"></textarea>
+                    <span class="shadow-input1">:</span>
+                </div>
 
-                        <div class="container-contact1-form-btn">
-                            <button class="contact1-form-btn" type="submit">
+                <div class="container-contact1-form-btn">
+                    <button class="contact1-form-btn" type="button">
 						<span>
 							Отправить
 							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 						</span>
-                            </button>
-                        </div>
+                    </button>
+                </div>
         </form>
     </div>
 </div>
@@ -85,6 +69,7 @@
         scale: 1.1
     });
 
+    $
 
 
 </script>

@@ -14,6 +14,3 @@
 
     $new = new Router;
     $new->run();
-
-
-?>

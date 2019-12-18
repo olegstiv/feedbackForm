@@ -6,18 +6,15 @@ use Core\Model;
 
 class Main extends Model
 {
-//    public $error;
-//    public $validIsEmail;
-//    public $validIsName;
-//    public $validIsMessage;
 
     public function addMessage($post)
     {
         $nameLen = strlen($post['name']);
         $massageLen = strlen($post['message']);
-
+        $error = [];
         if (strlen($nameLen < 3 or $nameLen > 50)) {
             $this->validIsName = false;
+            array_push($error, ['type' => 'validIsName', 'val' => false]);
         } else {
             $this->validIsName = true;
         }
@@ -27,10 +24,13 @@ class Main extends Model
             $this->validIsEmail = true;
         } else {
             $this->validIsEmail = false;
+            array_push($error, ['type' => 'validIsEmail', 'val' => false]);
         }
 
         if (strlen($massageLen < 3)) {
             $this->validIsMessage = false;
+            array_push($error, ['type' => 'validIsMessage', 'val' => false]);
+
         } else {
             $this->validIsMessage = true;
         }
@@ -42,10 +42,14 @@ class Main extends Model
             'text' => $post['message'],
         ];
             $result = $this->db->query("INSERT INTO message ( nameFO, email, text) VALUES ( :name, :email, :text )", $data);
-            // debug($result);
             $_POST = null;
+
+            array_push($error, ['result' => 'sucess']);
+            echo json_encode($error);
             return true;
         } else {
+            array_push($error, ['result' => 'error']);
+            echo json_encode($error);
             return false;
         }
 

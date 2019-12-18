@@ -6,9 +6,9 @@ return [
         'controller' => 'main',
         'action' => 'index',
     ],
-    '/feedback' => [
+    'feedback/add' => [
         'controller' => 'main',
-        'action' => 'addMessageAction',
+        'action' => 'addMessage',
     ]
 
 

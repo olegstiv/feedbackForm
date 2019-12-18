@@ -12,7 +12,7 @@ class MainController extends Controller
     {
 
         if (!empty($_POST)) {
-            $this->addMessage($_POST);
+            $this->addMessageAction($_POST);
 
         } else {
             $this->vars = [
@@ -31,7 +31,7 @@ class MainController extends Controller
         $this->view->render('Форма обратной связи', $this->vars, $result);
     }
 
-    public function addMessage()
+    public function addMessageAction()
     {
         $this->model->addMessage($_POST);
 

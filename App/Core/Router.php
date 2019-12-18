@@ -42,7 +42,6 @@ class Router
         if ($this->match()) {
             $path = 'Controllers\\' . ucfirst($this->params['controller']) . 'Controller';
             if (class_exists($path)) {
-
                 $action = $this->params['action'] . 'Action';
                 if (method_exists($path, $action)) {
                     $controller = new $path($this->params);
@@ -50,7 +49,7 @@ class Router
                     
                 } else {
 //                   View::errorCode(404);
-                    echo "net action";
+//                    echo "net action";
                 }
             } else {
 //                View::errorCode(404);
