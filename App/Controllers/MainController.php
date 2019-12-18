@@ -1,8 +1,8 @@
 <?php
 
-namespace app\controllers;
+namespace Controllers;
 
-use app\core\Controller;
+use Core\Controller;
 
 class MainController extends Controller
 {
@@ -26,7 +26,7 @@ class MainController extends Controller
         }
 
         $result = $this->model->getMessage();
-
+        
         $this->view->render('Форма обратной связи', $this->vars, $result);
     }
 

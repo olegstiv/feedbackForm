@@ -1,0 +1,11 @@
+{
+    "name": "user/feedback.local",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oleg Kravchuck",
+            "email": "olegstiv1@gmail.com"
+        }
+    ],
+    "require": {}
+}
