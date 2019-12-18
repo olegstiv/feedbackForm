@@ -21,8 +21,9 @@ class Db
         $stmt = $this->db->prepare($sql);
         if (!empty($params)) {
             foreach ($params as $param => $val) {
-
+                $val = strip_tags($val);
                 $stmt->bindValue(':' . $param, $val);
+
             }
         }
         // debug($stmt);
