@@ -23,3 +23,5 @@ foo.txt
 .out/
 
 ftpsync.settings
+
+/vendor/
