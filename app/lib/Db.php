@@ -25,22 +25,15 @@ class Db
                 $stmt->bindValue(':' . $param, $val);
             }
         }
+        // debug($stmt);
         $stmt->execute();
+        // $result = $stmt->errorInfo();
+        // debug($result);
         return $stmt;
 
     }
 
-    public function addMessage($name, $email, $text)
-    {
-        $data = [
-            'name' => $name,
-            'email' => $email,
-            'text' => $text,
-        ];
-        $stmr = $this->db->prepare("INSERT INTO message ( NameFO, email, text) VALUES ( :name, :email, :text )");
-        $stmr->execute($data);
-        return $stmr;
-    }
+
 
 
     public function row($sql, $params = [])

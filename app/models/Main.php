@@ -36,8 +36,13 @@ class Main extends Model
         }
 
         if ($this->validIsName and $this->validIsEmail and $this->validIsMessage) {
-
-            $result = $this->db->addMessage($post['name'], $post['email'], $post['message']);
+            $data = [
+            'name' => $post['name'],
+            'email' => $post['email'],
+            'text' => $post['message'],
+        ];
+            $result = $this->db->query("INSERT INTO message ( nameFO, email, text) VALUES ( :name, :email, :text )", $data);
+            // debug($result);
             $_POST = null;
             return true;
         } else {

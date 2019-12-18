@@ -58,7 +58,7 @@
         <div class="container-lastMessage row mb-3">
             <div class="col-md-12 themed-grid-col">
                 <div class="pb-3">
-                    <b>От: </b><?php echo $message['NameFO']; ?> <br>
+                    <b>От: </b><?php echo $message['nameFO']; ?> <br>
                     <b>Email: </b><?php echo $message['email']; ?>
                 </div>
                 <div class="row">
