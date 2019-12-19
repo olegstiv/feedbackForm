@@ -31,8 +31,8 @@
                         var result = 'sucess';
                 }
                 if (result == 'sucess') { //TODO fixed this shit
+                    location.reload();
                     $('body').after(function () {
-                        alert('aler');
                         return
                         "           <div class=\'container-lastMessage row mb-3\'>" +
                         "            <div class=\'col-md-12 themed-grid-col\'>" +
@@ -46,6 +46,9 @@
                         "            </div>" +
                         "        </div>";
                     });
+                    name.val('');
+                    email.val('');
+                    message.val('');
                 }
             }
         });

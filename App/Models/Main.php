@@ -30,7 +30,6 @@ class Main extends Model
         if (strlen($massageLen < 3)) {
             $this->validIsMessage = false;
             array_push($error, ['type' => 'validIsMessage', 'val' => false]);
-
         } else {
             $this->validIsMessage = true;
         }
@@ -43,7 +42,6 @@ class Main extends Model
         ];
             $result = $this->db->query("INSERT INTO message ( nameFO, email, text) VALUES ( :name, :email, :text )", $data);
             $_POST = null;
-
             array_push($error, ['result' => 'sucess']);
             echo json_encode($error);
             return true;
@@ -52,8 +50,6 @@ class Main extends Model
             echo json_encode($error);
             return false;
         }
-
-
     }
 
     public function getMessage()

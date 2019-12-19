@@ -37,7 +37,6 @@
 </div>
 <div class="lastMessage">
     <?php
-    //debug($vars);
     foreach ($messages as $message) { ?>
         <div class="container-lastMessage row mb-3">
             <div class="col-md-12 themed-grid-col">
@@ -64,14 +63,5 @@
 <script src="public/vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
 <script src="public/vendor/tilt/tilt.jquery.min.js"></script>
-<script>
-    $('.js-tilt').tilt({
-        scale: 1.1
-    });
-
-    $
-
-
-</script>
 
 <script src="public/scripts/main.js"></script>

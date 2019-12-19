@@ -23,19 +23,11 @@ class Db
             foreach ($params as $param => $val) {
                 $val = strip_tags($val);
                 $stmt->bindValue(':' . $param, $val);
-
             }
         }
-        // debug($stmt);
         $stmt->execute();
-        // $result = $stmt->errorInfo();
-        // debug($result);
         return $stmt;
-
     }
-
-
-
 
     public function row($sql, $params = [])
     {
@@ -49,6 +41,3 @@ class Db
         return $result->fetchColumn();
     }
 }
-
-
-?>

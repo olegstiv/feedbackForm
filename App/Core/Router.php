@@ -10,7 +10,6 @@ class Router
 
     function __construct()
     {
-
         $arr = require 'App/config/routes.php';
         foreach ($arr as $key => $value) {
             $this->add($key, $value);
@@ -21,7 +20,6 @@ class Router
     {
         $route = '#^' . $route . '$#';
         $this->routes[$route] = $params;
-
     }
 
     public function match()
@@ -34,7 +32,6 @@ class Router
             }
         }
         return false;
-
     }
 
     public function run()
@@ -46,20 +43,14 @@ class Router
                 if (method_exists($path, $action)) {
                     $controller = new $path($this->params);
                     $controller->$action();
-                    
                 } else {
-//                   View::errorCode(404);
-//                    echo "net action";
+                    echo "net action";
                 }
             } else {
-//                View::errorCode(404);
-                    // var_dump($this->match());
                     echo "net route";
             }
         } else {
-//            View::errorCode(404);
                     echo "net views";
-
         }
     }
 }

@@ -10,5 +10,3 @@ function debug($str)
     echo '</pre>';
     exit;
 }
-
-?>
