@@ -6,7 +6,6 @@ use Core\Model;
 
 class Main extends Model
 {
-
     public function addMessage($post)
     {
         $nameLen = strlen($post['name']);

@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     '' => [
         'controller' => 'main',
         'action' => 'index',
@@ -10,6 +9,4 @@ return [
         'controller' => 'main',
         'action' => 'addMessage',
     ]
-
-
 ];

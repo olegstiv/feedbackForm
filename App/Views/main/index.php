@@ -23,7 +23,6 @@
                                       placeholder="Текст сообщения"></textarea>
                     <span class="shadow-input1">:</span>
                 </div>
-
                 <div class="container-contact1-form-btn">
                     <button class="contact1-form-btn" type="button">
 						<span>
@@ -32,6 +31,7 @@
 						</span>
                     </button>
                 </div>
+            </div>
         </form>
     </div>
 </div>
@@ -50,18 +50,10 @@
             </div>
         </div>
     <?php } ?>
-
-
 </div>
 
-
-<!--===============================================================================================-->
-<!--===============================================================================================-->
 <script src="public/vendor/bootstrap/js/popper.js"></script>
 <script src="public/vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
 <script src="public/vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
 <script src="public/vendor/tilt/tilt.jquery.min.js"></script>
-
 <script src="public/scripts/main.js"></script>

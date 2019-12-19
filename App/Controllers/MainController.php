@@ -10,10 +10,8 @@ class MainController extends Controller
 
     public function indexAction()
     {
-
         if (!empty($_POST)) {
             $this->addMessageAction($_POST);
-
         } else {
             $this->vars = [
                 'validEmail' => true,
@@ -24,17 +22,13 @@ class MainController extends Controller
                 'textEmail' => ''
             ];
         }
-
-
         $result = $this->model->getMessage();
-        
         $this->view->render('Форма обратной связи', $this->vars, $result);
     }
 
     public function addMessageAction()
     {
         $this->model->addMessage($_POST);
-
         $this->vars = [
             'validEmail' => $this->model->validIsEmail,
             'validName' => $this->model->validIsName,
@@ -43,9 +37,5 @@ class MainController extends Controller
             'textName' => $_POST['name'],
             'textEmail' => $_POST['email']
         ];
-
-
     }
-
-
 }

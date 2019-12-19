@@ -4,7 +4,6 @@ namespace Core;
 
 class View
 {
-
     public $path;
     public $layout = 'default';
     public $route;
@@ -19,7 +18,6 @@ class View
     {
         extract($vars);
         extract($messages);
-
         if (file_exists($this->path)) {
             ob_start();
             require $this->path;
