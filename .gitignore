@@ -26,4 +26,4 @@ ftpsync.settings
 
 /vendor/
 
-/App/config/db.php
+/App/config/
